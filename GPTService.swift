@@ -44,8 +44,8 @@ struct GPTService {
                 let requestBody: [String: Any] = [
                     "model": "gpt-5",
                     "stream": true,
-                    "verbosity": "medium",
-                    "reasoning": ["effort": "medium"],
+                    // "verbosity": "medium",
+                    // "reasoning": ["effort": "medium"],
                     "messages": [
                         // Prompt iniziale di sistema: imposta il comportamento del modello
                         ["role": "system", "content": "Questo è un esame orale universitario. La risposta deve essere priva di elementi tipici del solo testo scritto e non adatti all'esposizione orale, tra cui elenchi numerati o puntati, parole in grassetto, formule numeriche, e così via. La risposta deve avere un livello tecnico-scientifico elevato. In ogni caso, ogni frase deve anche essere usata come breve messaggio di testo SMS, quindi non deve essere essere più lunga di 140 caratteri. Usa il più possibile espressioni italiane: per esempio, invece di \"molti setup server high-performance\", dovresti dire \"molti sistemi server ad alte prestazioni\" e così via. Inoltre, poiché il prompt viene dettato a voce, potrebbe contenere errori di trascrizione: per esempio, \"ISODOSI\" può significare \"ISO/OSI\", oppure \"di H CP\" può significare \"DHCP\", e così via; devi quindi interpretare parole o acronimi senza senso attribuendo loro il corretto significato in un contesto informatico."],
