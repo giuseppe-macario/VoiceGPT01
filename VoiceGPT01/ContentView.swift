@@ -212,20 +212,9 @@ struct ContentView: View {
 
     /// Configura la sessione audio per permettere registrazione + output via speaker.
     private func configureAudio() {
-        let session = AVAudioSession.sharedInstance()
-        
-        var options: AVAudioSession.CategoryOptions = [.defaultToSpeaker]
-        
-        // allowBluetoothHFP (nuovo) → disponibile solo negli SDK recenti
-        // allowBluetooth (vecchio)  → usato come fallback per Xcode 16/17
-        if #available(iOS 26.0, *) {
-            options.insert(.allowBluetoothHFP)
-        } else {
-            options.insert(.allowBluetooth)
-        }
-        
-        try? session.setCategory(.playAndRecord, options: options)
-        try? session.setActive(true)
+        try? AVAudioSession.sharedInstance()
+            .setCategory(.playAndRecord, options: [AVAudioSession.CategoryOptions.allowBluetoothHFP, .defaultToSpeaker])
+        try? AVAudioSession.sharedInstance().setActive(true)
     }
 }
 
@@ -234,4 +223,3 @@ struct ContentView: View {
 //#Preview {
 //    ContentView()
 //}
-
