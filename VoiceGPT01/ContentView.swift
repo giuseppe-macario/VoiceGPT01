@@ -226,6 +226,7 @@ struct ContentView: View {
         
         try? session.setCategory(.playAndRecord, options: options)
         try? session.setActive(true)
+    }
 }
 
 // MARK: - Preview
