@@ -20,6 +20,4 @@ jobs:
             -project VoiceGPT01.xcodeproj \
             -scheme VoiceGPT01 \
             -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
             build
-            
