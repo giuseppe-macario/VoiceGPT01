@@ -22,13 +22,13 @@ jobs:
         run: |
           xcodebuild -version
           xcodebuild -showsdks
-
-      - name: Build iOS (device SDK 26)
+          
+      - name: Build iOS (Simulator, no signing)
         run: |
           xcodebuild \
             -project VoiceGPT01.xcodeproj \
             -scheme VoiceGPT01 \
-            -sdk iphoneos \
-            -destination 'generic/platform=iOS' \
+            -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
             -configuration "${{ github.event.inputs.configuration }}" \
             build
