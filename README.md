@@ -7,7 +7,7 @@ Cliccare sul NOMEPROGETTO (colonna a sinistra della finestra) → poi cliccare s
 | --- | --- | --- |
 | OpenAI_API_Key | String | sk-proj-XXX |
 
-Le seguenti chiavi (permessi per il microfono dell'iPhone) erano necessarie nel vecchio Xcode; non è chiaro se siano necessario anche in Xcode 26:
+Le seguenti chiavi (permessi per il microfono dell'iPhone) erano necessarie nel vecchio Xcode; non servono a partire da Xcode 26.
 
 | Key | Type | Value |
 | --- | --- | --- |
