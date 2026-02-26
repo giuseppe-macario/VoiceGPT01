@@ -7,9 +7,15 @@ Cliccare sul NOMEPROGETTO (colonna a sinistra della finestra) → poi cliccare s
 | --- | --- | --- |
 | OpenAI_API_Key | String | sk-proj-XXX |
 
-Aggiungere poi le seguenti richieste di permessi per registrare col microfono:
+Inoltre, aggiungere la richiesta di permessi per registrare col microfono:
 
 | Key | Type | Value |
 | --- | --- | --- |
 | Privacy - Microfone Usage Description | String | L'app ha bisogno del microfono per la registrazione. |
+
+Facoltativo: \
+c'era anche bisogno della richesta di permesso per il riconoscimento vocale, ma non pare più necessaria con Xcode 26 e iOS 26.
+
+| Key | Type | Value |
+| --- | --- | --- |
 | Privacy - Speech Recognition Usage Description | String | L'app usa il riconoscimento vocale per la trascrizione. |
