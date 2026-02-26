@@ -1,13 +1,13 @@
 # Info.plist
 
-È necessario inserire la API_Key di OpenAI in `Info.plist`, altrimenti non possiamo usare ChatGPT. \
+È necessario inserire la OpenAI_API_Key in `Info.plist`, altrimenti non possiamo usare ChatGPT. \
 Cliccare sul NOMEPROGETTO (colonna a sinistra della finestra) → poi cliccare sul tab Info (nella parte destra della finestra)
 
 | Key | Type | Value |
 | --- | --- | --- |
 | OpenAI_API_Key | String | sk-proj-XXX |
 
-Le seguenti chiavi (permessi per il microfono dell'iPhone) erano necessarie nel vecchio Xcode; non servono a partire da Xcode 26.
+Aggiungere poi le seguenti richieste di permessi per registrare col microfono:
 
 | Key | Type | Value |
 | --- | --- | --- |
